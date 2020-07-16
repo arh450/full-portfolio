@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS `sample_db`;
-CREATE DATABASE `sample_db`;
+DROP DATABASE IF EXISTS `contact_db`;
+CREATE DATABASE `contact_db`;
