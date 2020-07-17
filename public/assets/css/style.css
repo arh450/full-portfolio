@@ -166,6 +166,74 @@
 }
 /* END OF PROJECTS SECTION */
 
+.message-section {
+  padding: 5rem 0rem 1rem 0rem;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000000 100%), url("https://images.unsplash.com/photo-1582338953822-b8c392953fee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+.message-section .form-group input {
+  box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
+  padding: 1.25rem 2rem;
+  height: auto;
+  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 80%;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  border: 0;
+}
+
+.message-section .form-group textarea {
+  box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
+  padding: 1.25rem 2rem;
+  height: auto;
+  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 80%;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  border: 0;
+}
+
+.contact-section {
+  padding-top: 5rem;
+  background-color: #000000;
+}
+.contact-section .card {
+  border: 0;
+  border-bottom: 0.25rem solid #282828;
+}
+.contact-section .card h4 {
+  font-size: 0.8rem;
+  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+}
+.contact-section .card hr {
+  border-color: #282828;
+  border-width: 0.25rem;
+  width: 3rem;
+}
+.contact-section .social {
+  margin-top: 5rem;
+}
+.contact-section .social a {
+  text-align: center;
+  height: 3rem;
+  width: 3rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 100%;
+  line-height: 3rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+.contact-section .social a:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+.contact-section .social a:active {
+  color: #fff;
+}
+
 /* FOOTER STYLING */
 .footer {
   padding: 5rem 0;
