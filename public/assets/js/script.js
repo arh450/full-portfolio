@@ -1,12 +1,12 @@
 
 // Smooth scrolling using jQuery easing
-$('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(() => {
+$('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
     if (
         location.pathname.replace(/^\//, "") ==
         this.pathname.replace(/^\//, "") &&
         location.hostname == this.hostname
     ) {
-        const target = $(this.hash);
+        let target = $(this.hash);
         target = target.length
             ? target
             : $("[name=" + this.hash.slice(1) + "]");
@@ -24,7 +24,7 @@ $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(() => {
 });
 
 // Closes responsive menu when a scroll trigger link is clicked
-$(".js-scroll-trigger").click(() => {
+$(".js-scroll-trigger").click(function () {
     $(".navbar-collapse").collapse("hide");
 });
 
@@ -35,7 +35,7 @@ $("body").scrollspy({
 });
 
 // Collapse Navbar
-const navbarCollapse = () => {
+let navbarCollapse = function () {
     if ($("#mainNav").offset().top > 100) {
         $("#mainNav").addClass("navbar-shrink");
     } else {
