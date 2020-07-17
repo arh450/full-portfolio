@@ -4,42 +4,42 @@
     margin: 0;
 }
 
-/* body {
-    background-image: url(https://images.unsplash.com/photo-1437751059337-ea72d4f73fcf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1642&q=80);
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    color: white;
-} */
 
 /* NAVBAR STYLING */
 #mainNav {
     min-height: 3.5rem;
-    background-color: #fff;
+    background-color: #282828;
   }
+
+  .navbar-light .navbar-nav .nav-link {
+    color: #fff;
+  }
+
   #mainNav .navbar-toggler {
     font-size: 80%;
     padding: 0.75rem;
-    color: #64a19d;
-    border: 1px solid #282828;
+    color: #fff;
+    border: 1px solid #000000;
   }
   #mainNav .navbar-toggler:focus {
     outline: none;
   }
   #mainNav .navbar-brand {
-    color: #000000;
+    color: #fff;
     font-weight: 700;
     padding: 0.9rem 0;
+    font-size: 22px;
   }
   #mainNav .navbar-nav .nav-item:hover {
-    color: fade(#fff, 80%);
+    color: #fff;
     outline: none;
     background-color: transparent;
+    
   }
   #mainNav .navbar-nav .nav-item:active, #mainNav .navbar-nav .nav-item:focus {
     outline: none;
     background-color: transparent;
+    color: #fff;
   }
   @media (min-width: 992px) {
     #mainNav {
@@ -57,6 +57,7 @@
       transition: none;
       padding: 2rem 1.5rem;
       color: rgba(255, 255, 255, 0.5);
+      font-size: 18px;
     }
     #mainNav .nav-link:hover {
       color: rgba(255, 255, 255, 0.75);
@@ -65,26 +66,26 @@
       color: #fff;
     }
     #mainNav.navbar-shrink {
-      background-color: #fff;
+      background-color: #282828;
     }
     #mainNav.navbar-shrink .navbar-brand {
-      color: #000000;
+      color: #fff;
     }
     #mainNav.navbar-shrink .nav-link {
-      color: #000000;
+      color: #fff;
       padding: 1.5rem 1.5rem 1.25rem;
       border-bottom: 0.25rem solid transparent;
     }
     #mainNav.navbar-shrink .nav-link:hover {
-      color: #64a19d;
+      color: #fff;
     }
     #mainNav.navbar-shrink .nav-link:active {
-      color: #467370;
+      color: #fff;
     }
     #mainNav.navbar-shrink .nav-link.active {
-      color: #64a19d;
+      color: #fff;
       outline: none;
-      border-bottom: 0.25rem solid #64a19d;
+      border-bottom: 0.25rem solid #fff;
     }
   }
 
@@ -122,7 +123,6 @@
   }
 
   .circular-portrait {
-    position: relative;
     width: 14rem;
     height: 14rem;
     overflow: hidden;
