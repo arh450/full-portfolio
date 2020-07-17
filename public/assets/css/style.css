@@ -161,8 +161,38 @@
   .projects-section .project-text hr {
     border-color: #282828;
     border-width: 0.25rem;
-    width: 30%;
+   
   }
+}
+
+#project-image-ge:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 15px 20px #3500d3;
+  border-radius: 5px;
+}
+#project-image-mp:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 15px 20px #f0ad4e;
+  border-radius: 5px;
+}
+#project-image-burg:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 15px 20px #d9534f;
+  border-radius: 5px;
+}
+#project-image-wd:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 15px 20px #0275d8;
+  border-radius: 5px;
+}
+#project-image-bq:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 15px 20px #5cb85c;
+  border-radius: 5px;
+}
+
+#repo-link:hover {
+  color: #282828 !important;
 }
 /* END OF PROJECTS SECTION */
 
