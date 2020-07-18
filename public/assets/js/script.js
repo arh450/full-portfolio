@@ -102,4 +102,24 @@ $(document).ready(function () {
     });
 
 
+    $('#email').on('click', function (event) {
+        event.preventDefault();
+
+        $('#alert-modal').modal('show');
+        $('#alert-title').text('EMAIL');
+        $('#alert-text').text('gusheptig@gmail.com');
+
+
+    });
+
+    $('#phone').on('click', function (event) {
+        event.preventDefault();
+
+        $('#alert-modal').modal('show');
+        $('#alert-title').text('PHONE');
+        $('#alert-text').text('207-206-5175');
+
+
+    });
+
 });
