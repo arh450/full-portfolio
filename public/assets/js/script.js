@@ -51,31 +51,52 @@ $(document).ready(function () {
     $('#message-area').on('click', 'button', function (event) {
         event.preventDefault();
 
-        let inputName = $('#inputName');
-        let inputEmail = $('#inputEmail');
-        let inputNote = $('#inputNote');
 
-        const newMessage = {
-            name: inputName.val().trim(),
-            email: inputEmail.val().trim(),
-            note: inputNote.val().trim()
-        };
+        let inputName = $('#inputName').val().trim();
+        let inputEmail = $('#inputEmail').val().trim();
+        let inputNote = $('#inputNote').val().trim();
 
-        $.ajax('/api/', {
-            type: 'POST',
-            data: newMessage
-        })
-            .then((result) => {
-                alert('thank you');
-                inputName.val('');
-                inputEmail.val('');
-                inputNote.val('');
+        if (!inputName && !inputEmail && !inputNote) {
+            $('#alert-modal').modal('show');
+            $('#alert-title').text('ERROR!');
+            $('#alert-text').text('There is nothing to submit...');
+
+        } else {
+
+            const newMessage = {
+                name: inputName,
+                email: inputEmail,
+                note: inputNote
+            };
+
+            $.ajax('/api/', {
+                type: 'POST',
+                data: newMessage
             })
-            .catch((err) => {
-                if (err) {
-                    throw err;
-                }
-            });
+                .then((result) => {
+                    $('#thanks-modal').modal('show');
+                    setTimeout(function () {
+                        $('#thanks-modal').modal('hide');
+                    }, 1650);
+                    $('#inputName').val('');
+                    $('#inputEmail').val('');
+                    $('#inputNote').val('');
+                })
+                .catch((err) => {
+                    if (err) {
+                        throw err;
+                    }
+                });
+
+
+        }
+
+
+
+
+
+
+
 
 
     });

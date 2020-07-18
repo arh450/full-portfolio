@@ -226,6 +226,17 @@
   border: 0;
 }
 
+.btn {
+  background-color: #000000;
+  color: #fff;
+}
+.btn:hover {
+  background-color: #282828;
+  color: #fff !important;
+  box-shadow: 0px 15px 20px #fff;
+	transform: translateY(-7px);
+}
+
 .contact-section {
   padding-top: 5rem;
   background-color: #000000;

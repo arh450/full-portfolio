@@ -44,7 +44,7 @@
       <div class="mx-auto text-center">
         <h1 class="mx-auto my-0 text-uppercase">Welcome!</h1>
         <h2 class="text-white-50 mx-auto mt-2 mb-5">This is my personal portfolio</h2>
-        <a class="btn btn-secondary js-scroll-trigger" href="#about">Get Started</a>
+        <a class="btn js-scroll-trigger" href="#about">START</a>
       </div>
     </div>
   </header>
@@ -219,7 +219,7 @@
               placeholder="Email" />
             <textarea class="form-control flex-fill mt-3 mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputNote" rows="6" type="text"
               placeholder="Message"></textarea>
-            <button type="button" class="btn btn-secondary btn-lg mt-3" id="submit-btn">Submit</button>
+            <button type="button" class="btn btn-lg mt-3" id="submit-btn">Submit</button>
           </form>
         </div>
       </div>
@@ -275,6 +275,38 @@
     <div class="container">Copyright © 2020 Augustus Heptig</div>
   </footer>
   <!-- END FOOTER -->
+
+  <!-- THANKS MODAL -->
+  <div class="modal fade" id="thanks-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header mx-auto">
+          <h5 class="modal-title">THANK YOU</h5>
+        </div>
+        <div class="modal-body mx-auto">
+          <p>YOUR INPUT IS GREATLY APPRECIATED!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ALERT MODAL -->
+  <div class="modal fade" id="alert-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header  mx-auto">
+          <h5 class="modal-title" id="alert-title"></h5>
+        </div>
+        <div class="modal-body mx-auto">
+          <p id="alert-text"></p>
+        </div>
+        <div class="modal-footer mx-auto">
+          <button type="button" class="btn" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
