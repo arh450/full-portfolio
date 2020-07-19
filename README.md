@@ -1,137 +1,65 @@
-# **Full-Stack Sequelize Template**
-this template is meant to get you up-and-running with a full-stack web application scaffolded out and ready to run using node, express, and sequelize.  happy coding.
+# Full-Stack Portfolio
 
-### **Useful Features**
-* 'dotenv' environmental variables package configured for sequelize
-* nodemon package configured
-* ESlint package configured for Airbnb styleguide
-* heroku-deployment ready
-* instructions to create separate development and production databases
-* instructions for migrating and seeding databases
+![badge](https://img.shields.io/badge/license-MIT-blue.svg)  ![badge](https://img.shields.io/badge/HTML-50%25-red) ![badge](https://img.shields.io/badge/JavaScript-25%25-yellow) ![badge](https://img.shields.io/badge/CSS-25%25-9cf) ![badge](https://img.shields.io/github/repo-size/gheptig/full-portfolio)
 
-### **How to Use This Template**
-* click "use template" next to the clone button, this will create a new repository on *your* github account
-* clone the repository down to your machine
-* run the `schema.sql` query in the mySQL tool of your choice  
-* run &nbsp; `npm install`
-* run &nbsp; `touch .env` &nbsp;in the root of your repository
-* open the .env file
-* add the four environmental variables that will be used to connect to the database:
-    <br/>       `DB_PASSWORD=yourpassword`
-    <br/>       `DB_HOST=127.0.0.1`
-    <br/>       `DB_USER=root`
-    <br/>       `DB_NAME=sample_db`
-* run &nbsp; `npm start` to start the server with nodemon which will automatically refresh after any server-side code changes
-* ***check out the optional migrations and heroku deployment guides below!***
+## Heroku URL 
 
-![image](./public/assets/images/dotenv.png)
+### https://arcane-sea-67876.herokuapp.com/
 
-### **Optional Database Migrations and Seeding**
-#### ***Hey, this part can be confusing and is waaay beyond the scope of this readme to fully explain...if you choose to implement this useful functionality, you will need to refer to the documentation!***
-***If you dont want to set up migrations at the moment, you can always come back to it, just skip ahead to the "Heroku Deployment" section***
-* Sequelize-cli allows you to create models and seed your database from the command line
-* This will allow you to pre-fill your database for development, as well as provide a consistent data set for testing accross multiple collaborators
-* Please refer to the instructions below and [Sequelize migrations documentation](https://sequelize.org/master/manual/migrations.html#bootstrapping) to configure this project for migrations
+## Brief Description
 
-### **Optional Instructions for Implementing Migrations**
-* run two sequelize-cli commands to initialize the migrations and seeders folders
+This a comprehensive responsive website that gives a brief introduction to who I am, past/current experiences, links to GitHub profile/projects, and other ways to get in contact with me.
 
-        npx sequelize-cli init:migrations
+Any and all feedback is welcomed and appreciated.
 
-  and 
+## Preview 
 
-        npx sequelize-cli init:seeders
+![preview](https://media.giphy.com/media/ibqNSKznbbTzqb9Zoc/giphy.gif)
 
-* run 
+## Technologies Used
 
-        npx sequelize-cli model:generate --name <ModelName> --attributes <someAttribute>:string,<anotherAttribute>:boolean
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - This website is written in JavaScript and ES6 JavaScript.
 
-    entering in the model name and the attribute you are initializing it with - for example: 
+- [Node.js](https://nodejs.org/en/about/) - Used to execute code for application on backend.
 
-        npx sequelize-cli model:generate --name User --attributes firstName:string,lastName:string,email:string
+- [Express](https://www.npmjs.com/package/express) - Used to route and build RESTful API and make requests/responses between database and client.
 
-* this will create the model in the models folder, and a migration file in the migrations folder.
-* you will need to go to the model file and finish setting it up, add validation, etc.
-* you will also need to set up your migrations file to match your model before running the migration
-* Once you have set up your model and matching migration, you can run the migration to create the table in your database:
-            
-        npx sequelize-cli db:migrate
+- [Sequelize](https://sequelize.org/) - ORM library used to connect/interact with mySQL database and execute SQL queries.
 
-* Next we will create a seed file that will allow us to populate the table with a dataset on command, allowing us to share a consistent dataset accross collaborators, as well as revert the table back to a clean state after testing.
+- [MySQL Workbench](https://www.mysql.com/products/workbench/) - MySQL GUI used to architect, test, and manage MySQL database.
 
-        npx sequelize-cli seed:generate <SEED NAME HERE, EX. DEMO-USER>
+- [jQuery](https://jquery.com/) -  Used on frontend to simplify JavaScript code and DOM traversal, and easing scrolling effect.
 
-* Open the seed file created in the seeders folder and set up your seed data. for example:
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) - Used to style the html elements/application.
 
-![image](./public/assets/images/seeder-file.png)
+- [Bootstrap](https://getbootstrap.com/docs/4.4/getting-started/introduction/) - Grid/Column system used to create responsive page layout/structure.  Also used to create and style elements such as buttons, modals, and cards.
 
-* once you have filled in your seed file you can run it:
+- [Heroku](https://www.heroku.com/) - Used to host working application. (see app link above).
 
-        npx sequelize-cli db:seed:all
+## License
 
-* you are now all set to push everything up to github and continue with the steps below to deploy to heroku.
-* the final step will be to seed your production database as well.  See the optional last step in the heroku deployment section.
+MIT License
 
-### **Heroku Deployment**
-* you may need to log into the heroku cli, do so by running &nbsp; `heroku login` &nbsp; in the terminal, you will also need the heroku website so might as well log in there too
-* run &nbsp;`heroku create` in the root of your project repository.
-* you can now run `git push heroku master` to push your application to heroku in its current state.  You will need to do this each time you wish to rebuild your heroku deployment.  You can also set up your repository to automatically push to heroku when you push to github -look around, you will find it!
-* select your application on the heroku website
-* click "Configure Add-ons"
-* type "JawsDB" into the search bar, select "JawsDB MySQL" and provision the "Kitefin Shared - Free" default option
-* open the JawsDB instance you have created by clicking on it
-* you will be brought to a page with the connection information for your deployed database, which you will need to establish a connection to your production database in the MySQL management tool of your choice
+Copyright (c) 2020 Augustus Heptig
 
-![image](./public/assets/images/JawsDB-connection-info.png)
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-* now it is time to create an instance of your production database in your MySQL management tool.  The following instructions are specifically for MySQL Workbench, but they should apply in a general sense to any tool you are using.
-* create a new MySQL connection instance
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-![image](./public/assets/images/new-connection.png)
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
-* give your connection a meaningful name, then using the information from the JawsDB Connection Info page, fill in the connection information on the new connection dialog, click the "store in keychain" button and store your password
+## Contributors/Authors
 
-![image](./public/assets/images/new-con-setup.png)
-
-* test you connection by clicking the "Test Connection" button at the bottom of the dialog
-* if your connection fails, double check that you copied the information correctly
-* if your connection succeeds, click into the instance
-* don't be alarmed if your schemas panel looks like this, you will still be able to view and query the database: 
-
-![image](./public/assets/images/no-fetch.png)
-
-* to run queries, dont forget your `USE <DATABASE NAME>;` statement, using the database name you see in the schemas panel:
-
-![image](./public/assets/images/db-name.png)
-
-* now you can manage your deployed production database!
-* ***Optional last steps when using migrations:***
-* To seed your production database, add the following line to the scripts in the &nbsp; `package.json` &nbsp; file, right below the start script:
-
-        "heroku-postbuild": "npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all"
-
-* save and commit your changes to github, then run another
-
-        git push heroku master
-
-    to push the changes to heroku and run a fresh build.  The script that was added will run the migration and seed at the end of the heroku build.
-* `select * ...` &nbsp; within your database management tool to see your freshly seeded production database!  Note that the database will be re-seeded each time you run a build, and the build ***does not*** drop the table automatically.  So to avoid doubling your data set, drop the table prior to running another build (you can use your management tool for this).  If you do not wish to continue re-seeding your production database, as you surely will at some point, just remove the `"heroku-postbuild"` script from the `package.json` file.
-
-### **Notes About This Database Configuration**
-* you now have two databases, a local development database and a deployed production database
-* when running your application locally as you develop, it will connect to the local development database using the credentials you supplied in your .env file
-* the heroku-deployed application will connect automatically to the deployed production database
-* if at any point you with to revert to a clean data set, run the migration/seeder instructions above.  Heroku has a cli that can be accessed by running
-
-        heroku run bash <name of application>
-  this will allow you to run the migration and seed commands on the production database manually by running the `npx sequelize-cli...` commands detailed above.
-* remember that the heroku postbuild script in the package.json file is optional and may or may not be worth keeping in for you if you use the heroku cli tool.  It will append the seedfile dataset to the database each time the application is pushed to heroku.  You can also drop the table using your management tool prior to running another heroku build.
-
-### **To Disable ESLint**
-* delete the .eslintrc.js file
-* run &nbsp; `npm uninstall eslint`
-
-### **Links and Resources**
-* [eslint Getting started page](https://eslint.org/docs/user-guide/getting-started)
-* [dotenv NPM Documentation](https://www.npmjs.com/package/dotenv)
-* [airbnb styleguide documentation](https://github.com/airbnb/javascript)
+- Augustus Heptig - Author/Creator

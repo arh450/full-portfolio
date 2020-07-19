@@ -111,6 +111,11 @@
       padding: 0;
     }
 }
+
+#welcome {
+  font-size: 6rem;
+  color: #fff;
+}
 /* END START HEADER */
 
 /* ABOUT SECTION */
